@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @author ffzs
- * @describe
+ * @describe 1431. 拥有最多糖果的孩子
  * @date 2020/6/1
  */
 public class Solution {
