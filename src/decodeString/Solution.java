@@ -1,5 +1,9 @@
 package decodeString;
 
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+
 /**
  * @author ffzs
  * @describe 394. 字符串解码
@@ -49,6 +53,8 @@ public class Solution {
     }
 
     public static void main(String[] args) {
+        String minTime = ZonedDateTime.now().format(DateTimeFormatter.ISO_ZONED_DATE_TIME);
+        System.out.println(minTime);
         String s = "3[a]2[b4[F]c]";
         System.out.println(decodeString(s));
         System.out.println(i);
