@@ -1,11 +1,10 @@
 package reversePaires;
 
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Arrays;
 
 public class reversePaires {
-    public static int reversePairs(@NotNull int[] nums){
+    public static int reversePairs(int[] nums){
         int len = nums.length;
         if (len<2) return 0;
         int[] tmp = new int[len];
