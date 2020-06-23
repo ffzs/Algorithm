@@ -97,4 +97,5 @@ public class Solution {
 
 ```
 
-![image-20200623092539235](./67. 二进制求和.assets/image-20200623092539235.png)
+![image-20200623093135618](image-20200623093135618.png)
+
