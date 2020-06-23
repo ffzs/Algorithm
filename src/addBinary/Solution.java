@@ -7,20 +7,11 @@ package addBinary;
  */
 public class Solution {
     public static String addBinary(String a, String b) {
-        char[] aChar, bChar;
+
         int len = Math.max(a.length(), b.length());
-        if (a.length() > b.length()) {
-            aChar = a.toCharArray();
-            bChar = charList(b, a.length() - b.length(), len);
-        }
-        else if (a.length() == b.length()) {
-            aChar = a.toCharArray();
-            bChar = b.toCharArray();
-        }
-        else{
-            bChar = b.toCharArray();
-            aChar = charList(a, b.length() - a.length(), len);
-        }
+        char[] aChar = charList(a, len - a.length(), len);
+        char[] bChar = charList(b, len - b.length(), len);
+
 
         char[] res = new char[len];
         int next = 0;
