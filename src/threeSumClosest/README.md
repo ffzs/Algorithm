@@ -38,7 +38,8 @@
 + i< left < right
 + left.v  + right.v + i.v  取到刚好大于 target为止
 + 全程比较sum和target的差值，求差值绝对值的最小值
-+ 差值为0，直接返回0即可
++ 差值为0，直接返回target即可
++ 因为目的是获取target，那就在最接近target的值的范围左右取值就好，一个左一个右
 
 ```java
 /**
