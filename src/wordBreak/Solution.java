@@ -12,7 +12,7 @@ import java.util.Map;
  * @date 2020/6/25
  */
 public class Solution {
-    public static boolean wordDict(String s, List<String> wordDict) {
+    public static boolean wordBreak(String s, List<String> wordDict) {
         Map<Character, List<String>> map = new HashMap<>();
         char[] seq = s.toCharArray();
         for (String s1 : wordDict) {
@@ -26,16 +26,16 @@ public class Solution {
             }
         }
         System.out.println(map);
-        return wordDict2(seq, 0, map);
+        return wordBreak(seq, 0, map);
     }
 
-    public static boolean wordDict2 (char[] seq, int start, Map<Character, List<String>> map) {
+    public static boolean wordBreak (char[] seq, int start, Map<Character, List<String>> map) {
         if (start == seq.length) return true;
         if (!map.containsKey(seq[start])) return false;
         else {
             for (String s1 : map.get(seq[start])) {
                 if (isMatch(seq, s1, start)) {
-                    return wordDict2(seq, start+s1.length(), map);
+                    return wordBreak(seq, start+s1.length(), map);
                 }
             }
         }
@@ -55,6 +55,6 @@ public class Solution {
     public static void main(String[] args) {
         String s = "leetcode";
         List<String> wordDict = new ArrayList<>(List.of(new String[]{"leet", "code"}));
-        System.out.println(wordDict(s, wordDict));
+        System.out.println(wordBreak(s, wordDict));
     }
 }
