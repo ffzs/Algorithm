@@ -134,3 +134,65 @@ public class Solution3 {
 ```
 
 ![image-20200625093337449](image-20200625093337449.png)
+
+
+
++ 通过使用HashMap对字典中的字符串通过第一个字符进行存储
++ 更改比对的逻辑，通过第一个字符获取到对应的字符串数据
++ 动态规划的逻辑是一样的
++ 匹配到最后，能够拼成长度为s.length则返回true否者返回false
+
+```java
+/**
+ * @author ffzs
+ * @describe
+ * @date 2020/6/25
+ */
+public class Solution4 {
+    public static boolean wordBreak(String s, List<String> wordDict) {
+        Map<Character, List<String>> map = new HashMap<>();
+        char[] seq = s.toCharArray();
+        for (String s1 : wordDict) {
+            Character f = s1.charAt(0);
+            if (!map.containsKey(f)){
+                List<String> l = new ArrayList<>();
+                l.add(s1);
+                map.put(f, l);
+            }else{
+                map.get(f).add(s1);
+            }
+        }
+        boolean[] step = new boolean[seq.length + 1];
+        step[0] = true;
+        for (int i = 0; i < seq.length ; i++) {
+            if (step[i] && map.containsKey(seq[i])){
+                for (String s1 : map.get(seq[i])) {
+                    if (isMatch(seq, s1, i)) {
+                        if (i+s1.length() == seq.length) return true;
+                        step[i+s1.length()] = true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    private static boolean isMatch (char[] seq, String s, int start) {
+        if (start + s.length() > seq.length) return false;
+
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) != seq[start+i]) return false;
+        }
+
+        return true;
+    }
+
+    public static void main(String[] args) {
+        String s = "leetcode";
+        List<String> wordDict = new ArrayList<>(List.of(new String[]{"leet", "code"}));
+        System.out.println(wordBreak(s, wordDict));
+    }
+}
+```
+
+![image-20200625102301296](image-20200625102301296.png)
