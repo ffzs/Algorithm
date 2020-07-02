@@ -156,3 +156,25 @@ public class Solution3 {
 ```
 
 ![image-20200702150809410](README.assets/image-20200702150809410.png)
+
+## python一行解题
+
++ 原生api
+
+```python
+class Solution:
+    def kthSmallest(self, matrix: List[List[int]], k: int) -> int:
+        return sorted(__import__('functools').reduce(__import__('operator').add, matrix))[k-1]
+```
+
+![image-20200702152810374](README.assets/image-20200702152810374.png)
+
++ 使用numpy
+
+```python
+class Solution:
+    def kthSmallest(self, matrix: List[List[int]], k: int) -> int:
+        return __import__("numpy").sort(__import__("numpy").ravel(matrix))[k-1]
+```
+
+![image-20200702152331291](README.assets/image-20200702152331291.png)
