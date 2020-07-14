@@ -23,6 +23,7 @@ public class Solution2 {
         return Arrays.copyOf(nums1, k);
     }
 
+
     public static void main(String[] args) {
         int[] nums1 = {4,9,5},  nums2 = {9,4,9,8,4};
         System.out.println(Arrays.toString(intersect(nums1, nums2)));
