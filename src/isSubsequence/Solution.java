@@ -4,6 +4,7 @@ package isSubsequence;
  * @author: ffzs
  * @Date: 2020/7/27 上午8:03
  */
+
 public class Solution {
     public static boolean isSubsequence(String s, String t) {
         char[] sc = s.toCharArray();
