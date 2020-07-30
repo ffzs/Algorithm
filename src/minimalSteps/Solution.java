@@ -44,8 +44,7 @@ public class Solution {
 
         if (trap.size() > 0 && stone.size() == 0) return -1;  // 如果有陷阱，但是石头无法到达直接返回-1
 
-        int[][] startTable = getDistance(start);
-        if (trap.size() == 0) return startTable[end[0]][end[1]];  // 如果没有陷阱的话，那么直接通过起点到达终点
+        if (trap.size() == 0) return getDistance(start)[end[0]][end[1]];  // 如果没有陷阱的话，那么直接通过起点到达终点
 
         List<int[]> stoneNew = new ArrayList<>(stone);
         stoneNew.add(end);
