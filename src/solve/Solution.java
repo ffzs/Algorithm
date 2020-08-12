@@ -9,6 +9,7 @@ public class Solution {
     char[][] board;
     int m, n;
     int[][] directions = {{0,1}, {1, 0}, {-1, 0}, {0, -1}};
+
     public void solve(char[][] board) {
         m = board.length;
         if (m == 0) return;
