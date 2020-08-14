@@ -10,7 +10,7 @@ import java.util.Map;
 
 
 public class Solution2 {
-    Map<Node, Node> step = new HashMap<Node, Node>();
+    Map<Node, Node> step = new HashMap<>();
 
     public Node cloneGraph(Node node) {
         if (node == null) return null;
