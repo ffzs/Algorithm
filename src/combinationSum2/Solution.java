@@ -23,6 +23,7 @@ public class Solution {
             Collections.sort(ret);
             res.add(new ArrayList<>(ret));
         }
+
         else if (target > 0) {
             for (int i = start; i < n; i++) {
                 if (target >= candidates[i]) {
