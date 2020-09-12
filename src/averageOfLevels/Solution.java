@@ -14,7 +14,10 @@ class TreeNode {
     int val;
     TreeNode left;
     TreeNode right;
-    TreeNode(int x) { val = x; }
+
+    TreeNode(int x) {
+        val = x;
+    }
 }
 
 public class Solution {
@@ -35,7 +38,7 @@ public class Solution {
                 if (current.left != null) queue.offer(current.left);
                 if (current.right != null) queue.offer(current.right);
             }
-            res.add(sum /size);
+            res.add(sum / size);
         }
         return res;
     }
