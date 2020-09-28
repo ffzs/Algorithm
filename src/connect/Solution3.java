@@ -30,6 +30,8 @@ public class Solution3 {
             rootNext = rootNext.next;
         }
 
+
+
         cur.next = next;
         if (root.right != null) dfs(root.right);
         if (root.left != null) dfs(root.left);
