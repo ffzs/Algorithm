@@ -12,6 +12,7 @@ public class Solution2 {
         List<Integer> res = new ArrayList<>();
         if (root == null) return res;
 
+
         Deque<TreeNode> stack = new LinkedList<>();
 
         stack.push(root);
