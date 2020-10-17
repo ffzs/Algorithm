@@ -83,3 +83,42 @@ public class Solution {
 ```
 
 ![image-20201017080251968](https://gitee.com/ffzs/picture_go/raw/master/img/image-20201017080251968.png)
+
+## 进阶
+
++ 通过二进制位运算记录信息
++ 因为状态都是新生成的int值因此不需要回溯
++ *x* & (−*x*) 可以获得 x*x* 的二进制表示中的最低位的 1 的位置；
++ *x* & (*x*−1) 可以将 x*x* 的二进制表示中的最低位的 1 置成 0。
+
+```java
+/**
+ * @author: ffzs
+ * @Date: 2020/10/17 上午8:48
+ */
+public class Solution2 {
+
+    int count = 0, n;
+    public int totalNQueens(int n) {
+        this.n = n;
+        dfs(0,0,0,0);
+        return count;
+    }
+
+    private void dfs (int row, int col, int left, int right) {
+        if (row == n) {
+            count++;
+            return;
+        }
+
+        int available = ((1 << n) -1) & (~(col|left|right));
+        while (available != 0) {
+            int pos = -available & available;
+            available -= pos;
+            dfs(row+1, col|pos, (left|pos)<<1, (right|pos)>>1);
+        }
+    }
+}
+```
+
+![image-20201017090045380](https://gitee.com/ffzs/picture_go/raw/master/img/image-20201017090045380.png)
