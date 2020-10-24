@@ -11,6 +11,8 @@ public class Solution {
         int i = 1, j = 1;
         while (i<name.length() && j<typed.length()) {
             if (name.charAt(i) == typed.charAt(j)) {
+
+
                 i++;j++;
             }
             else if (name.charAt(i-1) == typed.charAt(j)) {

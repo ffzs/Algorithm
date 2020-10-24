@@ -1,6 +1,5 @@
 package recoverTree;
 
-import javafx.scene.Node;
 
 import java.util.ArrayList;
 import java.util.Comparator;
