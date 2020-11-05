@@ -23,6 +23,7 @@ public class Solution2 {
         for (int i : nums2) {
             if (set1.contains(i)) set2.add(i);
         }
+
         int[] res = new int[set2.size()];
         int i = 0;
         for (Integer integer : set2) {
