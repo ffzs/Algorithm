@@ -7,6 +7,7 @@ import java.util.List;
  * @author: ffzs
  * @Date: 2020/12/6 下午12:47
  */
+
 public class Solution {
 
     public List<List<Integer>> generate(int numRows) {
