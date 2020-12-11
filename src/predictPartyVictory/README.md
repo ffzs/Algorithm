@@ -81,3 +81,74 @@ public class Solution2 {
 ```
 
 ![image-20201211091620801](https://gitee.com/ffzs/picture_go/raw/master/img/image-20201211091620801.png)
+
++ 使用数组代替队列
++ 遍历以便后重新构建字符串，然后递归处理
+
+```java
+/**
+ * @author: ffzs
+ * @Date: 2020/12/11 上午8:09
+ */
+public class Solution {
+    public String predictPartyVictory(String senate) {
+        if(senate.length() == 1) return senate.charAt(0) == 'R' ? "Radiant" : "Dire";
+        int r = 0, d = 0;
+        char[] cs = senate.toCharArray();
+        boolean[] ban = new boolean[cs.length];
+
+        for (int i = 0; i < cs.length; i++) {
+            if (ban[i]) continue;
+            if (cs[i] == 'R') {
+                if (d > 0) {
+                    d--;
+                    ban[i] = true;
+                }else {
+                    r++;
+                }
+            }
+            else {
+                if (r > 0) {
+                    r --;
+                    ban[i] = true;
+                }
+                else {
+                    d ++;
+                }
+            }
+        }
+
+        int i = 0;
+        while (i < cs.length && (r > 0 || d > 0)) {
+            if (!ban[i] && cs[i] == 'R' && d > 0) {
+                ban[i] = true;
+                d--;
+            }
+            else if (!ban[i] && cs[i] == 'D' && r > 0) {
+                ban[i] = true;
+                r--;
+            }
+            i++;
+        }
+        if(r != 0)
+            return "Radiant";
+        if(d != 0)
+            return "Dire";
+
+        StringBuilder sb = new StringBuilder();
+        for (int j = 0; j < ban.length; j++) {
+            if (!ban[j]) sb.append(cs[j]);
+        }
+        return predictPartyVictory(sb.toString());
+    }
+}
+
+class Test {
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        System.out.println(solution.predictPartyVictory("DRRDRDRDRDDRDRDRD"));
+    }
+}
+```
+
+![image-20201211204918602](https://gitee.com/ffzs/picture_go/raw/master/img/image-20201211204918602.png)

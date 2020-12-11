@@ -1,5 +1,7 @@
 package predictPartyVictory;
 
+import java.util.Arrays;
+
 /**
  * @author: ffzs
  * @Date: 2020/12/11 上午8:09
@@ -12,7 +14,7 @@ public class Solution {
         boolean[] ban = new boolean[cs.length];
 
         for (int i = 0; i < cs.length; i++) {
-            if (!ban[i]) continue;
+            if (ban[i]) continue;
             if (cs[i] == 'R') {
                 if (d > 0) {
                     d--;
@@ -31,19 +33,19 @@ public class Solution {
                 }
             }
         }
+
         int i = 0;
         while (i < cs.length && (r > 0 || d > 0)) {
-            if (cs[i] == 'R' && d > 0) {
+            if (!ban[i] && cs[i] == 'R' && d > 0) {
                 ban[i] = true;
                 d--;
             }
-            else if (cs[i] == 'D' && r > 0) {
+            else if (!ban[i] && cs[i] == 'D' && r > 0) {
                 ban[i] = true;
                 r--;
             }
             i++;
         }
-
         if(r != 0)
             return "Radiant";
         if(d != 0)
@@ -54,5 +56,12 @@ public class Solution {
             if (!ban[j]) sb.append(cs[j]);
         }
         return predictPartyVictory(sb.toString());
+    }
+}
+
+class Test {
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        System.out.println(solution.predictPartyVictory("DRRDRDRDRDDRDRDRD"));
     }
 }
