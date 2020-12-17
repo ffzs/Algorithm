@@ -14,6 +14,7 @@ public class Solution {
             while (i + 1 < prices.length && prices[i] < prices[i+1]) {
                 i++;
             }
+
             if (start != i) {
                 res += (prices[i] - prices[start]);
             }
