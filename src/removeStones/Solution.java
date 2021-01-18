@@ -47,5 +47,4 @@ public class Solution {
     private void union (int[] f, int i, int j) {
         f[find(f, j)] = find(f, i);
     }
-
 }
