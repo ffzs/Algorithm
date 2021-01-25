@@ -6,7 +6,6 @@ import java.util.*;
  * @author: ffzs
  * @Date: 2021/1/21 下午7:43
  */
-
 class Edge {
     int id,x,y,len;
 
