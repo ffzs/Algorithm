@@ -52,7 +52,7 @@ public class Solution {
 
         pre.next = l;
         tail.next = r;
-        return head.next;
+        return root.next;
     }
 
 }
