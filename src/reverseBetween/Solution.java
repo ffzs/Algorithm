@@ -41,7 +41,6 @@ public class Solution {
         r = l.next;
         l.next = null;
 
-
         while (r != null && i < right-1) {
             tmp = r;
             r = r.next;
