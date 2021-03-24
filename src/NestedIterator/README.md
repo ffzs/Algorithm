@@ -76,4 +76,4 @@ public class NestedIterator implements Iterator<Integer> {
 }
 ```
 
-![image-20210323180718749](README.assets/image-20210323180718749.png)
+![image-20210323180718749](https://gitee.com/ffzs/picture_go/raw/master/img/image-20210323180718749.png)
