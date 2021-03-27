@@ -21,12 +21,10 @@ public class Solution {
             tail = tail.next;
             n++;
         }
-        System.out.println(n);
 
         tail.next = head;
 
         for (int i = 0; i < (n-k%n); i++) {
-            System.out.println(tail.val);
             tail = tail.next;
 
         }
@@ -35,5 +33,4 @@ public class Solution {
         tail.next = null;
         return head;
     }
-
 }
