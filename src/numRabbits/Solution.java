@@ -7,7 +7,7 @@ package numRabbits;
 public class Solution {
 
     public int numRabbits(int[] answers) {
-        int[] counter = new int[999];
+        int[] counter = new int[1000];
         for (int answer : answers) {
             counter[answer]++;
         }
