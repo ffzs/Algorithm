@@ -22,8 +22,6 @@ public class Solution {
         }
         dfs(0,1);
         dfs(0,2);
-        System.out.println(set);
-        System.out.println(set.size());
         return set.size();
     }
 
@@ -35,7 +33,6 @@ public class Solution {
         }
 
         String cur = s.substring(start, end);
-//        System.out.println(cur);
 
         if(!map.containsKey(cur)) return;
 
