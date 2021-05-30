@@ -82,4 +82,4 @@ public class Solution {
 }
 ```
 
-![image-20210529095036710](README.assets/image-20210529095036710.png)
+![image-20210529095036710](https://gitee.com/ffzs/picture_go/raw/master/img/image-20210529095036710.png)
