@@ -38,5 +38,4 @@ public class Solution {
         int r = (next - 1) / n, c = (next - 1) % n;
         return new int[]{n - 1 - r, r % 2 == 1 ? n - 1 - c : c};
     }
-
 }
