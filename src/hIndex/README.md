@@ -67,3 +67,26 @@ public class Solution {
 ```
 
 ![image-20210711075650268](https://gitee.com/ffzs/picture_go/raw/master/img/image-20210711075650268.png)
+
+## 进阶
+如果给定数组有序，请优化时间
+
++ 通过二分法处理
+
+```java
+    public int hIndex3(int[] citations) {
+        int n = citations.length;
+
+        if (n == 0 || citations[n - 1] == 0) return 0;
+        int l = 0, r = n - 1;
+        while (l < r) {
+            int mid = (l + r) >>> 1;
+            if (citations[mid] < n-mid) l = mid +1;
+            else r = mid;
+        }
+
+        return n-l;
+    }
+```
+
+![image-20210712065643384](https://gitee.com/ffzs/picture_go/raw/master/img/image-20210712065643384.png)
