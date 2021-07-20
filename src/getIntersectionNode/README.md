@@ -57,7 +57,7 @@ listB 中节点数目为 n
 
 
 链接：https://leetcode-cn.com/problems/intersection-of-two-linked-lists
-
+https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/
 ## 解题记录
 
 + 通过类似快慢指针的方法，快慢指针是指针速度不同，导致快指针会追上慢
