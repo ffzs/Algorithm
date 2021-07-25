@@ -14,7 +14,6 @@ public class Solution {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < n; i++) map.put(target[i], i);
 
-        List<Integer> lst = new ArrayList<>();
         int[] tmp = new int[n];
         int len = 0;
         for (int i : arr) {
