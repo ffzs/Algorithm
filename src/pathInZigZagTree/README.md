@@ -33,3 +33,43 @@
 
 
 链接：https://leetcode-cn.com/problems/path-in-zigzag-labelled-binary-tree
+
+## 解题记录
+
++ 仔细观察该树的每一层的数量其实是2的阶乘，每一层的取值范围`8-15>1000-1111`可以通过二进制进行转化位置
++ 回溯上层位置也可以根据`label >> 1`进行操作
+
+```java
+/**
+ * @author: ffzs
+ * @Date: 2021/7/29 上午7:00
+ */
+public class Solution {
+
+    public List<Integer> pathInZigZagTree(int label) {
+        int r = 1, start = 1;
+        while (start * 2 <= label) {
+            r ++;
+            start *= 2;
+        }
+
+        if (r % 2 == 0) label = reverse(label, r);
+        List<Integer> res = new ArrayList<>();
+
+        while (r > 0) {
+            if (r % 2 == 0) res.add(0, reverse(label, r));
+            else res.add(0, label);
+            r --;
+            label >>= 1;
+        }
+        return res;
+    }
+
+    private int reverse(int label, int r) {
+        return (1 << r -1) + (1 << r) - 1 - label;
+    }
+
+}
+```
+
+![image-20210729071608598](https://gitee.com/ffzs/picture_go/raw/master/img/image-20210729071608598.png)
