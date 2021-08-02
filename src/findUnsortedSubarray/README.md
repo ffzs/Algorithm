@@ -41,5 +41,42 @@
 
 ## 解题记录
 
-+ 
++ 简单思考就是优先通过排序将数组处理成有序状态
++ 然后从头尾去掉重复的部分，剩下的就是需要重新排序的部分
++ 也可以通过维护一个最大最小值，这样的话就不用进行排序了
 
+```java
+/**
+ * @author: ffzs
+ * @Date: 2021/8/3 上午6:54
+ */
+public class Solution {
+
+    public int findUnsortedSubarray(int[] nums) {
+        int[] tmp = Arrays.copyOf(nums, nums.length);
+        Arrays.sort(tmp);
+        int i = 0, j = nums.length - 1;
+        while (i < nums.length && tmp[i] == nums[i]) i++;
+        while (j > i && tmp[j] == nums[j]) j--;
+        return j - i + 1;
+    }
+
+
+    public int findUnsortedSubarray2(int[] nums) {
+        int n = nums.length;
+        int max = nums[0], min = nums[n - 1];
+        int begin = 0, end = -1;
+
+        for (int i = 0, j = n - 1; i < n; i++, j--) {
+            if (nums[i] < max) end = i;
+            else max = nums[i];
+            if (nums[j] > min) begin = j;
+            else min = nums[j];
+        }
+        return end - begin + 1;
+    }
+
+}
+```
+
+![image-20210803071357891](https://gitee.com/ffzs/picture_go/raw/master/img/image-20210803071357891.png)
