@@ -39,5 +39,23 @@
 
 ## 解题记录
 
-+ 
++ 直接前缀和
 
+```java
+/**
+ * @author: ffzs
+ * @Date: 2021/8/28 上午7:10
+ */
+public class Solution {
+
+    public int[] runningSum(int[] nums) {
+        for (int i = 1; i < nums.length; i++) {
+            nums[i] += nums[i-1];
+        }
+        return nums;
+    }
+
+}
+```
+
+![image-20210828071710991](https://gitee.com/ffzs/picture_go/raw/master/img/image-20210828071710991.png)
