@@ -48,5 +48,31 @@
 
 ## 解题记录
 
-+ 
++ 如果一个数出现过n次，那么最后结果的和中就是加上`arr[i] *n 
++ 所以问题转化为一个数值究竟会出现多少回
++ 整体是奇数的话，去掉该数本身那么剩余的数个数必定是偶数，因此它的左右可以使偶偶也可以是奇奇
++ 最后通过可能出现的次数相乘得到最终出现次数，然后再加和
 
+```java
+/**
+ * @author: ffzs
+ * @Date: 2021/8/29 上午8:24
+ */
+public class Solution {
+
+    public int sumOddLengthSubarrays(int[] arr) {
+        int res = 0;
+        int n = arr.length;
+        for (int i = 0; i < n; i++) {
+            int l = i + 1, r = n - i;
+            int l_even = (l + 1) / 2, r_even = (r + 1) /2;
+            int l_odd = l/2, r_odd = r/2;
+            res += (l_even * r_even + l_odd * r_odd) * arr[i];
+        }
+        return res;
+    }
+
+}
+```
+
+![image-20210829084635974](https://gitee.com/ffzs/picture_go/raw/master/img/image-20210829084635974.png)
