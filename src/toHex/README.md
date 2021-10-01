@@ -30,3 +30,30 @@
 
 
 链接：https://leetcode-cn.com/problems/convert-a-number-to-hexadecimal
+
+## 解题记录
+
++ 16进制和2进制比，一个十六进制数由4个二进制组成
++ 因此每4位获取一个字符即可
++ 注意负数的情况
+
+```java
+/**
+ * @author: ffzs
+ * @Date: 2021/10/2 上午7:05
+ */
+public class Solution {
+    public String toHex(int num) {
+        if (num == 0) return "0";
+        final char[] cs = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
+        StringBuilder sb = new StringBuilder();
+        do {
+            sb.append(cs[num & 0xf]);
+            num >>>= 4;
+        } while (num > 0);
+        return sb.reverse().toString();
+    }
+}
+```
+
+![image-20211002072844067](https://gitee.com/ffzs/picture_go/raw/master/img/image-20211002072844067.png)
