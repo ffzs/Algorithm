@@ -48,5 +48,41 @@ next、hasNext 和 peek 最多调用  1000 次
 
 ## 解题记录
 
-+ 
++ 由于需要peek，那么久需要知道下一个是什么，在不更改iterator结构的前提下，可以通过缓存一个next做到这一步
 
+```java
+/**
+ * @author: ffzs
+ * @Date: 2021/10/5 上午7:02
+ */
+public class PeekingIterator implements Iterator<Integer> {
+    Iterator<Integer> it;
+    Integer next;
+    public PeekingIterator(Iterator<Integer> iterator) {
+        // initialize any member here.
+        it = iterator;
+        next = it.next();
+    }
+
+    // Returns the next element in the iteration without advancing the iterator.
+    public Integer peek() {
+        return next;
+    }
+
+    // hasNext() and next() should behave the same as in the Iterator interface.
+    // Override them if needed.
+    @Override
+    public Integer next() {
+        Integer ret = next;
+        next = it.hasNext()? it.next(): null;
+        return ret;
+    }
+
+    @Override
+    public boolean hasNext() {
+        return next != null;
+    }
+}
+```
+
+![image-20211005071452098](https://gitee.com/ffzs/picture_go/raw/master/img/image-20211005071452098.png)
