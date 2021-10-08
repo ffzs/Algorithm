@@ -17,7 +17,6 @@ public class Solution {
         bin['C'] = 3;
         char[] cs = s.toCharArray();
         int n = cs.length;
-        
         int tmp = 0;
 
         Set<String> set = new HashSet<>();
