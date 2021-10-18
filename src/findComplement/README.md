@@ -35,5 +35,25 @@
 
 ## 解题记录
 
-+ 
++ 优先找到num的第一个1的位置
++ 然后通过`^`处理
 
+```java
+/**
+ * @author: ffzs
+ * @Date: 2021/10/18 下午5:29
+ */
+public class Solution {
+
+    public int findComplement(int num) {
+        int idx = 1, tmp = num;
+        while ((tmp >>> 1) != 0) {
+            tmp = tmp >>> 1;
+            idx++;
+        }
+        return num ^ ((1 << idx) - 1);
+    }
+}
+```
+
+![image-20211018174918556](https://gitee.com/ffzs/picture_go/raw/master/img/image-20211018174918556.png)

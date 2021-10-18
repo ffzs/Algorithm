@@ -14,5 +14,4 @@ public class Solution {
         }
         return num ^ ((1 << idx) - 1);
     }
-
 }
