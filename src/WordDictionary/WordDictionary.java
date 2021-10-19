@@ -55,8 +55,9 @@ public class WordDictionary {
         }
         else {
             Node cur = node.children[word.charAt(idx) - 'a'];
-            if (cur != null && dfs(word, idx + 1, cur)) return true;
+            return cur != null && dfs(word, idx + 1, cur);
         }
+
         return false;
     }
 
