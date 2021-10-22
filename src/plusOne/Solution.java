@@ -17,5 +17,4 @@ public class Solution {
         res[0] = 1;
         return res;
     }
-    
 }
