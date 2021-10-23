@@ -6,7 +6,6 @@ package constructRectangle;
  */
 
 public class Solution {
-
     public int[] constructRectangle(int area) {
         int w = (int)Math.sqrt(area);
         while (w < area) {
@@ -17,5 +16,4 @@ public class Solution {
         }
         return new int[]{area / w, w};
     }
-
 }

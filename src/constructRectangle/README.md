@@ -29,5 +29,27 @@
 
 ## 解题记录
 
-+ 
++ 通过开方求近似情况
++ 因为开方后取整为数值比之前的小，那么优先获取宽度即可，向下取到知道整除
 
+```java
+/**
+ * @author: ffzs
+ * @Date: 2021/10/23 上午7:24
+ */
+
+public class Solution {
+    public int[] constructRectangle(int area) {
+        int w = (int)Math.sqrt(area);
+        while (w < area) {
+            if (area % w == 0) {
+                return new int[]{area / w, w};
+            }
+            w --;
+        }
+        return new int[]{area / w, w};
+    }
+}
+```
+
+![image-20211023080218084](https://gitee.com/ffzs/picture_go/raw/master/img/image-20211023080218084.png)
