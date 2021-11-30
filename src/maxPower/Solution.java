@@ -19,6 +19,7 @@ public class Solution {
                 cnt = 1;
             }
         }
+
         res = Math.max(res, cnt);
         return res;
     }
