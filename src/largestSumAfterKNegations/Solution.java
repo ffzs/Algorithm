@@ -20,7 +20,6 @@ public class Solution {
             Arrays.sort(nums);
             nums[0] = -nums[0];
         }
-
         int res = 0;
         for (int num : nums) {
             res += num;
