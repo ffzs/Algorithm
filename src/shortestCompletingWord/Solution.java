@@ -12,7 +12,6 @@ public class Solution {
         int[] lCnt = count(licensePlate);
         int total = 0;
         for (int i : lCnt) total += i;
-//        System.out.println(Arrays.toString(lCnt));
         String res = words[0];
         int minLen = Integer.MAX_VALUE;
         boolean flag = true;
