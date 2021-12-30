@@ -36,4 +36,22 @@ public class Solution {
         return true;
     }
 
+
+    public boolean isNStraightHand2(int[] hand, int groupSize) {
+        int n = hand.length;
+        if (n % groupSize != 0) return false;
+
+        Arrays.sort(hand);
+        int[] buckets = new int[groupSize];
+        for (int i = 0; i < n; ++i) {
+            if (i % groupSize != 0 && hand[i] - hand[i-1] > 1) return false;
+            ++buckets[hand[i] % groupSize];
+        }
+
+        for (int b : buckets) {
+            if (b != buckets[0]) return false;
+        }
+        return true;
+    }
+
 }
