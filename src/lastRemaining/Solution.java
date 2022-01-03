@@ -5,6 +5,7 @@ package lastRemaining;
  * @Date: 2022/1/2 上午8:15
  *
  */
+
 public class Solution {
 
     public int lastRemaining(int n) {
