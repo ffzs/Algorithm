@@ -22,9 +22,9 @@ public class Solution {
         return new String(cs);
     }
 
-    private char getOne(int pre, int suf) {
-        for (int i = 0; i < 26; i++) {
-            if (i + 'a' != pre && i + 'a' != suf) return (char)(i + 'a');
+    private char getOne(char pre, char suf) {
+        for (char i = 'a'; i <= 'z'; ++i) {
+            if (i != pre && i != suf) return i;
         }
         return '?';
     }
