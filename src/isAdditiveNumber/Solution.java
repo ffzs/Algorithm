@@ -32,6 +32,7 @@ public class Solution {
             if (cur > a+b) return false;
             if (cur == a + b) {
                 if (isValid(b, cur, i + 1)) return true;
+                break;
             }
         }
         return false;
