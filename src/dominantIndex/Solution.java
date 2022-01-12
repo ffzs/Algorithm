@@ -7,7 +7,7 @@ package dominantIndex;
 public class Solution {
 
     public int dominantIndex(int[] nums) {
-        int max = Integer.MIN_VALUE, next = Integer.MIN_VALUE;
+        int max = -1, next = -1;
         int idx = 0;
         for (int i = 0; i < nums.length; i++) {
             int num = nums[i];
