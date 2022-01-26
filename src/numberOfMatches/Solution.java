@@ -17,5 +17,4 @@ public class Solution {
             return numberOfMatches(n / 2);
         }
     }
-
 }
