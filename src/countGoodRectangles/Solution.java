@@ -9,8 +9,7 @@ public class Solution {
     public int countGoodRectangles(int[][] rectangles) {
         int max = 0, res = 0;
         for (int[] re : rectangles) {
-            int cur = Math.min(re[0], re[1]);
-            if (cur > max) max = cur;
+            if (Math.min(re[0], re[1]) > max) max = Math.min(re[0], re[1]);
         }
 
         for (int[] re : rectangles) {
