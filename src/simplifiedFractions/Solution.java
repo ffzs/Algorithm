@@ -14,7 +14,7 @@ public class Solution {
         List<String> res = new ArrayList<>();
         for (int i = 2; i <= n; i++) {
             for (int j = 1; j < i; j++) {
-                if (!ban[i][j]) res.add(j+"/"+i);
+                if (!ban[i][j]) res.add(new StringBuilder(i).append('/').append(j).toString());
                 for (int k = 2; k * i <= n; k++) {
                     ban[k*i][k*j] = true;
                 }
