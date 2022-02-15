@@ -19,6 +19,7 @@ public class Solution {
                 if (cur > col[j]) col[j] = cur;
             }
         }
+
         List<Integer> res = new ArrayList<>();
         Set<Integer> set = new HashSet<>();
         for (int i : row) {
