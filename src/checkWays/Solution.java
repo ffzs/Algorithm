@@ -27,7 +27,6 @@ public class Solution {
             }
         }
         lst.sort((a, b) -> cnt[b] - cnt[a]);
-
         if (cnt[lst.get(0)] < lst.size() - 1) return 0;
         int[] father = new int[max+1];
         father[lst.get(0)] = -1;
