@@ -1,5 +1,7 @@
 package numberOfGoodSubsets;
 
+import java.util.Arrays;
+
 /**
  * @author: ffzs
  * @Date: 2022/2/22 上午9:27
@@ -13,6 +15,7 @@ public class Solution {
         for (int pow_num : pow_nums) {
             isPow[pow_num] = true;
         }
+        System.out.println(Arrays.toString(isPow));
     }
     static int MOD = (int)1e9 + 7;
     public int numberOfGoodSubsets(int[] nums) {
