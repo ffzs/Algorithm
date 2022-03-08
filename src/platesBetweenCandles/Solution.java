@@ -34,7 +34,7 @@ public class Solution {
         for (int i = 0; i < queries.length; i++) {
             int l = right[queries[i][0]], r = left[queries[i][1]];
             if (l == -1 || r == -1 || l >= r) res[i] = 0;
-            else res[i] = cnt[left[queries[i][1]]] - cnt[right[queries[i][0]]];
+            else res[i] = cnt[r] - cnt[l];
         }
 
         return res;
