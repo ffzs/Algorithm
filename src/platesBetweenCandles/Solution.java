@@ -30,6 +30,7 @@ public class Solution {
             }
             right[i] = r;
         }
+
         int[] res = new int[queries.length];
         for (int i = 0; i < queries.length; i++) {
             int l = right[queries[i][0]], r = left[queries[i][1]];
