@@ -5,6 +5,7 @@ import java.util.*;
 /**
  * @author: ffzs
  * @Date: 2022/3/16 上午7:57
+ *  十字链表
  */
 public class AllOne {
 
