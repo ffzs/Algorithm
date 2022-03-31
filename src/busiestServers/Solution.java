@@ -10,7 +10,7 @@ public class Solution {
 
     public List<Integer> busiestServers(int k, int[] arrival, int[] load) {
         int n = arrival.length;
-        PriorityQueue<int[]> pq = new PriorityQueue<>((a,b)-> a[0] - b[0]);
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[0] - b[0]);
         TreeSet<Integer> set = new TreeSet<>();
         int[] cnt = new int[k];
 
