@@ -10,14 +10,11 @@ import java.util.List;
  */
 public class Solution {
     static int[] isSelf = new int[10001];
-    static {
-        Arrays.fill(isSelf, -1);
-    }
     public List<Integer> selfDividingNumbers(int left, int right) {
         List<Integer> res = new ArrayList<>();
         for (int i = left; i <= right; i++) {
-            if (isSelf[i] == -1) {
-                isSelf[i] = isSelfDividingNumber(i)? 1 : 0;
+            if (isSelf[i] == 0) {
+                isSelf[i] = isSelfDividingNumber(i)? 1 : -1;
             }
             if (isSelf[i] == 1) res.add(i);
         }
