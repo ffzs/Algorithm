@@ -17,8 +17,7 @@ public class Solution {
     public int countPrimeSetBits(int left, int right) {
         int res = 0;
         for (int i = left; i <= right; i++) {
-            int cnt = Integer.bitCount(i);
-            if ((1 << cnt & p) != 0) {
+            if ((1 << Integer.bitCount(i) & p) != 0) {
                 ++res;
             }
         }
