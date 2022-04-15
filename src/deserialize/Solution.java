@@ -6,7 +6,7 @@ import java.util.*;
  * @author: ffzs
  * @Date: 2022/4/15 上午8:04
  */
-public class NestedInteger { // Constructor initializes an empty nested list.
+class NestedInteger { // Constructor initializes an empty nested list.
         public NestedInteger() {};
 
         public NestedInteger(int value) {};
