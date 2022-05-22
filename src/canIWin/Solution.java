@@ -8,7 +8,6 @@ public class Solution {
 
     int[] memo;
     public boolean canIWin(int maxChoosableInteger, int desiredTotal) {
-        if (maxChoosableInteger >= desiredTotal) return true;
         if ((1 + maxChoosableInteger) * maxChoosableInteger / 2 < desiredTotal) return false;
         memo = new int[1 << maxChoosableInteger];
         return dfs(maxChoosableInteger, 0, desiredTotal, 0);
