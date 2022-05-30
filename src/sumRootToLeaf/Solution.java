@@ -34,8 +34,8 @@ public class Solution {
             return;
         }
 
-        if (node.left != null) dfs(node.left, cur);
-        if (node.right != null) dfs(node.right, cur);
+        dfs(node.left, cur);
+        dfs(node.right, cur);
     }
 
 }
