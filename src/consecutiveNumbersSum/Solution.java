@@ -12,9 +12,9 @@ public class Solution {
     public int consecutiveNumbersSum(int n) {
         int res = 1, k = 2, sum = 1;
         while (sum + k <= n) {
-            if ((n - sum) % k == 0) res++;
+            if ((n - sum) % k == 0) res+=1;
             sum += k;
-            ++k;
+            k+=1;
         }
 
         return res;
