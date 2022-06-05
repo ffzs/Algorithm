@@ -37,7 +37,6 @@ public class Solution {
             ret.append(cs[i]);
             i += 1;
         }
-        System.out.println(ret.toString());
         return ret.toString();
     }
 }
