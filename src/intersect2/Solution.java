@@ -41,6 +41,7 @@ public class Solution {
             if (quadTree1.val) return new Node(true, true);
             else return copy(quadTree2);
         }
+
         if (quadTree2.isLeaf) {
             if (quadTree2.val) return new Node(true, true);
             else return copy(quadTree1);
