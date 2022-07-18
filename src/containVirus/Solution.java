@@ -7,9 +7,11 @@ import java.util.*;
  * @Date: 2022/7/18 上午8:15
  */
 public class Solution {
-    int[][] dirs = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+    private static int[][] dirs = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+    int m, n;
     public int containVirus(int[][] isInfected) {
-        int m = isInfected.length, n = isInfected[0].length;
+        m = isInfected.length;
+        n = isInfected[0].length;
         int res = 0, mark;
         List<Set<Integer>> lst = new ArrayList<>();
         List<Integer> walls = new ArrayList<>();
@@ -30,7 +32,7 @@ public class Solution {
                         int x = arr[0], y = arr[1];
                         for (int[] dir : dirs) {
                             int xx = dir[0] + x, yy = dir[1] + y;
-                            if (isValid(xx, yy, m, n)) {
+                            if (isValid(xx, yy)) {
                                 if (isInfected[xx][yy] == 1) {
                                     queue.offer(new int[]{xx, yy});
                                     isInfected[xx][yy] = mark;
@@ -76,7 +78,7 @@ public class Solution {
         return res;
     }
 
-    private boolean isValid (int x, int y, int m, int n) {
+    private boolean isValid (int x, int y) {
         return x >= 0 && y >= 0 && x < m && y < n;
     }
 }
