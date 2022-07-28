@@ -31,7 +31,6 @@ public class Solution {
                     b = b * 10 + (cs[i] - '0');
                     i += 1;
                 }
-//                System.out.println(a + "/" + b);
                 res[0] = res[0] + (T/b*a) * label;
                 i-=1;
             }
@@ -49,7 +48,7 @@ public class Solution {
         }
 
         for (int i = 2; res[0] != 0 && i <= 10; i++) {
-            if (res[0] % i == 0 && res[1] % i == 0) {
+            while (res[0] % i == 0 && res[1] % i == 0) {
                 res[0] /= i;
                 res[1] /= i;
             }
