@@ -11,13 +11,14 @@ import java.util.Queue;
 public class Solution {
 
     public String orderlyQueue(String s, int k) {
-        String res = s;
+        StringBuilder sb = new StringBuilder(s);
         if (k == 1) {
             for (int i = 1; i < s.length(); i++) {
-                String tmp = s.substring(i) + s.substring(0, i);
-                if (tmp.compareTo(res) < 0) res = tmp;
+                sb.append(sb.charAt(0));
+                sb.deleteCharAt(0);
+                if (sb.toString().compareTo(s) < 0) s = sb.toString();
             }
-            return res;
+            return s;
         }
         char[] cs = s.toCharArray();
         Arrays.sort(cs);
