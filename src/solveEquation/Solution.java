@@ -45,7 +45,6 @@ public class Solution {
                 num += c - '0';
             }
         }
-        System.out.println(Arrays.toString(ret));
         return ret;
     }
 }
