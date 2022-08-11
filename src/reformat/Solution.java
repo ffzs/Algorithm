@@ -7,7 +7,6 @@ package reformat;
 public class Solution {
 
     public String reformat(String s) {
-        StringBuilder res = new StringBuilder();
         char[] cs = s.toCharArray();
         int n = s.length();
         int[] letters = new int[n], nums = new int[n];
