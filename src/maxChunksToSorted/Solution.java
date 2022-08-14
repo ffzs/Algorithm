@@ -38,6 +38,4 @@ public class Solution {
         }
         return stack.size();
     }
-
-
 }
