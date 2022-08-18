@@ -19,12 +19,11 @@ public class Solution {
 
         for (int i = nums.length - 1; i >= 0; i--) {
             int num = nums[i];
-            if (cnt[num] * freq[cnt[num]] == i) return i+1;
+            if (cnt[num] * freq[cnt[num]] == i) return i + 1;
             freq[cnt[num]]--;
             cnt[num]--;
             if (cnt[nums[i-1]] * freq[cnt[nums[i-1]]] == i) return i + 1;
         }
         return 0;
     }
-
 }
