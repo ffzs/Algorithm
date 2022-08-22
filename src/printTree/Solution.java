@@ -8,7 +8,6 @@ import java.util.List;
  * @Date: 2022/8/22 上午8:41
  */
 
-
 class TreeNode {
     int val;
     TreeNode left;
@@ -22,16 +21,12 @@ class TreeNode {
     }
 }
 
-
 public class Solution {
 
     private int maxDepth = 1;
     public List<List<String>> printTree(TreeNode root) {
-        int n = 0;
         getDepth(root, 1);
-        for (int i = 0, j = 1; i < maxDepth; i++, j *= 2) {
-            n += j;
-        }
+        int n = (1 << maxDepth) - 1;
         List<List<String>> res = new ArrayList<>();
         List<String> tmp = new ArrayList<>();
         for (int i = 0; i < n; i++) {
