@@ -1,8 +1,6 @@
 package preimageSizeFZF;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author: ffzs
@@ -25,18 +23,15 @@ public class Solution {
             tmp[i][0] = tmp[i-1][0] * 5;
             tmp[i][1] = tmp[i-1][1] * 5 + 1;
             tmp[i][2] = tmp[i-1][0] + tmp[i][1];
-            System.out.println(Arrays.toString(tmp[i]));
         }
     }
     public int preimageSizeFZF(int k) {
-//        if (k == 5) return 0;
         int n = tmp.length, r;
         for (int i = n-1; i >= 1; i--) {
             if (k < tmp[i][2]) continue;
             r = k / tmp[i][2];
             k = k % tmp[i][2];
-            if (k > tmp[i][2] - i) return 0;
-            if (k == 5 || r == 5) return 0;
+            if (k > tmp[i][2] - i || k == 5 || r == 5) return 0;
             if (k == 0) return 5;
         }
         return 5;
