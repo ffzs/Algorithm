@@ -36,8 +36,8 @@ public class Solution {
         });
 
         long res = 0;
-        int m = sweep.length, j;
-        for (int i = 0; i < m; i++) {
+        int m = sweep.length, i = 0, j;
+        while (i < m) {
             j = i + 1;
             while (j < m && sweep[i][0] == sweep[j][0]) j += 1;
             if (j == m) break;
@@ -54,7 +54,7 @@ public class Solution {
             }
 
             res += (long) ySum * (sweep[j][0] - sweep[i][0]);
-            i = j - 1;
+            i = j;
         }
         return (int) (res % MOD);
     }
