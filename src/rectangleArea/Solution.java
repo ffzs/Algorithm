@@ -43,7 +43,7 @@ public class Solution {
             if (j == m) break;
             for (int k = i; k < j; k++) {
                 int idx = sweep[k][1], l = rectangles[idx][1], r= rectangles[idx][3];
-                // 二分法找到范围
+                // 可改为二分法找到范围
                 for (int x = 0; x < ySeq.length-1; x++) {
                     if (l <= ySeq[x] && ySeq[x+1] <= r) cnt[x] += sweep[k][2];
                 }
