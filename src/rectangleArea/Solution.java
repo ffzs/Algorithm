@@ -52,6 +52,7 @@ public class Solution {
             for (int k = 0; k < ySeq.length-1; k++) {
                 if (cnt[k] > 0) ySum += ySeq[k + 1] - ySeq[k];
             }
+
             res += (long) ySum * (sweep[j][0] - sweep[i][0]);
             i = j - 1;
         }
