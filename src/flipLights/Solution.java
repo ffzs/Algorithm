@@ -5,7 +5,7 @@ package flipLights;
  * @Date: 2022/9/15 上午8:35
  *
  * kkkkkk 0,2
- * gggggg 1,3
+ * gggggg 1,2,3
  * kgkgkg 1,3
  * gkgkgk 1,3
  * gkkgkk
