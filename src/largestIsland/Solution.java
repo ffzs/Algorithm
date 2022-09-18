@@ -32,14 +32,14 @@ public class Solution {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if (grid[i][j] == 0) {
-                    res = Math.max(res, unionArea(i, j, id));
+                    res = Math.max(res, unionArea(i, j));
                 }
             }
         }
         return res;
     }
 
-    private int unionArea (int x, int y, int n) {
+    private int unionArea (int x, int y) {
         int area = 1;
         Set<Integer> set = new HashSet<>();
         for (int[] dir : directions) {
