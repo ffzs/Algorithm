@@ -8,7 +8,7 @@ public class Solution {
 
     public boolean canTransform(String start, String end) {
         if (start.length() != end.length()) return false;
-        char[] op = start.toCharArray(), ed =end.toCharArray();
+        char[] op = start.toCharArray(), ed = end.toCharArray();
         int n = start.length();
         int i = 0, j = 0;
         while (i < n && j < n) {
