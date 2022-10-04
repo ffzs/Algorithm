@@ -20,7 +20,7 @@ public class Solution {
                 else res += 1;
             }
         }
-        return res;
+        return res + cnt;
     }
 
 }
