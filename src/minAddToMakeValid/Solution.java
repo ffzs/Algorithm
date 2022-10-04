@@ -11,7 +11,7 @@ public class Solution {
 
     public int minAddToMakeValid(String s) {
         char[] cs = s.toCharArray();
-        int n = cs.length, res = 0, cnt = 0;
+        int res = 0, cnt = 0;
         for (char c : cs) {
             if (c == '(') {
                 cnt += 1;
