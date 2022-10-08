@@ -19,13 +19,12 @@ public class Solution {
         Arrays.sort(tmp, (a, b)-> a[0] - b[0]);
         Arrays.sort(nums1);
         int h = 0, t = n - 1;
-        for (int i = 0; i < n; i++) {
-            if (nums1[i] > tmp[h][0]) {
-                res[tmp[h][1]] = nums1[i];
+        for (int value : nums1) {
+            if (value > tmp[h][0]) {
+                res[tmp[h][1]] = value;
                 h += 1;
-            }
-            else {
-                res[tmp[t][1]] = nums1[i];
+            } else {
+                res[tmp[t][1]] = value;
                 t -= 1;
             }
         }
