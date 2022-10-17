@@ -26,8 +26,6 @@ public class Solution {
             }
             res = Math.max(res, r - l);
             if (r == n) break;
-            System.out.println(l + ":" + r + ":" + types);
-            System.out.println(Arrays.toString(cnt));
             while (l <= r && types >= 2) {
                 int num = fruits[l];
                 cnt[num] -= 1;
