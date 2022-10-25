@@ -23,7 +23,6 @@ public class Solution {
             }
             if (flag) break;
         }
-        System.out.println(edges.size());
         int res = 1;
         while (!edges.isEmpty()) {
             int size = edges.size();
