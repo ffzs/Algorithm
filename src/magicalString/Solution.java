@@ -13,7 +13,7 @@ public class Solution {
         int i = 2, j = 3, len, num, res = 0;
         while (j < n) {
             len = infos[i];
-            num = infos[j - 1];
+            num = 3 - infos[j - 1];
             while (len > 0 && j < n) {
                 infos[j++] = num;
                 if (num == 1) res += 1;
