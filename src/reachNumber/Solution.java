@@ -11,7 +11,7 @@ public class Solution {
     public int reachNumber(int target) {
         target = Math.abs(target);
         int i = 1;
-        while (target >= i) {
+        while (target > 0) {
             target -= i;
             i += 1;
         }
