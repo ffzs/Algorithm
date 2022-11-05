@@ -7,7 +7,7 @@ package parseBoolExpr;
 public class Solution {
 
     public boolean parseBoolExpr(String expression) {
-        char[]  cs = expression.toCharArray();
+        char[] cs = expression.toCharArray();
         return parseBool(cs, 0, cs.length-1);
     }
 
@@ -24,7 +24,7 @@ public class Solution {
             for (int i = l + 2; i <= r; i++) {
                 if (cs[i] == '(') cnt += 1;
                 else if (cs[i] == ')') cnt -= 1;
-                if (cnt == 0 && (cs[i] == ',') || i == r) {
+                if ((cnt == 0 && cs[i] == ',') || i == r) {
                     ret &= parseBool(cs, start, i - 1);
                     start = i + 1;
                 }
@@ -37,7 +37,7 @@ public class Solution {
             for (int i = l + 2; i <= r; i++) {
                 if (cs[i] == '(') cnt += 1;
                 else if (cs[i] == ')') cnt -= 1;
-                if (cnt == 0 && (cs[i] == ',') || i == r) {
+                if ((cnt == 0 && cs[i] == ',') || i == r) {
                     ret |= parseBool(cs, start, i - 1);
                     start = i + 1;
                 }
