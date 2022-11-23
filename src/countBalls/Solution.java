@@ -10,7 +10,7 @@ public class Solution {
         int[] b = new int[46];
         int pre = liSum(lowLimit);
         for (int i = lowLimit; i <= highLimit; i++) {
-            if (i % 10 == 0) pre = liSum(i);
+            if (i % 10 == 0) pre -= 8;
             b[pre++] += 1;
         }
         int res = 0;
