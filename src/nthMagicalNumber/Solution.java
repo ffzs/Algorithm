@@ -11,7 +11,7 @@ public class Solution {
     public int nthMagicalNumber(int n, int a, int b) {
         int lcm = leastCommonMultiple(a ,b);
         int round = lcm / a + lcm / b - 1;
-        long res = (long)(n / round) * lcm % MOD;
+        int res = (int)((long)(n / round) * lcm % MOD);
         int it = n % round;
         if (it == 0) return (int)res;
         int A = a, B = b;
@@ -19,11 +19,10 @@ public class Solution {
             if (A < B) A += a;
             else B += b;
         }
-        return (int)((res + Math.min(A, B))%MOD);
+        return (res + Math.min(A, B) % MOD)%MOD;
     }
 
     private int leastCommonMultiple(int a, int b) {
-        if (a == b) return a;
         return a * b / greatestCommonDivisor(a, b);
     }
 
