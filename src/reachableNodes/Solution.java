@@ -12,6 +12,7 @@ import java.util.PriorityQueue;
 public class Solution {
     static final int INF = Integer.MAX_VALUE >> 1;
     public int reachableNodes(int[][] edges, int maxMoves, int n) {
+
         List<int[]>[] g = new List[n];
         for (int i = 0; i < n; i++) g[i] = new ArrayList<>();
         for (int[] edge : edges) {
