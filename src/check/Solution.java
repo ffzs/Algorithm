@@ -16,5 +16,4 @@ public class Solution {
         }
         return cnt == 0 || nums[nums.length-1] <= nums[0];
     }
-
 }
