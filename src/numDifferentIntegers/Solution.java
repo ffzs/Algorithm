@@ -20,7 +20,7 @@ public class Solution {
             }
             else if (sb.length() > 0) {
                 nums.add(sb.toString());
-                sb = new StringBuilder();
+                sb.delete(0, sb.length());
             }
         }
         if (sb.length() > 0) nums.add(sb.toString());
