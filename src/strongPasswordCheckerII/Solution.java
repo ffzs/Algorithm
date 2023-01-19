@@ -5,7 +5,6 @@ package strongPasswordCheckerII;
  * @Date: 2023/1/19 上午9:12
  */
 public class Solution {
-    private static String signals = "!@#$%^&*()-+";
     public boolean strongPasswordCheckerII(String password) {
         if (password.length() < 8) return false;
         int lower = 0, upper = 0, digit = 0;
