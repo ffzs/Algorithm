@@ -21,7 +21,6 @@ public class Solution {
         }
         for (Map.Entry<Integer, Set<Integer>> entry: map.entrySet()) {
             int size = entry.getValue().size();
-            if (size > k) continue;
             res[size-1] += 1;
         }
 
