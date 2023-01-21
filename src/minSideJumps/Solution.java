@@ -9,6 +9,7 @@ public class Solution {
     public int minSideJumps(int[] obstacles) {
         int[] open = {0, 0, 1, 0};
         int res = 0, cnt = 1;
+
         for (int i = 1; i < obstacles.length; i++) {
             int v = obstacles[i];
             if (open[v] == 1) {
