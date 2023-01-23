@@ -18,6 +18,7 @@ public class Solution {
             }
             pre = bracket[0];
         }
+
         return res;
     }
 
