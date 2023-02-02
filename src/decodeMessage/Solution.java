@@ -17,6 +17,7 @@ public class Solution {
                 if (idx > 'z') break;
             }
         }
+
         char[] ms = message.toCharArray();
         for (int i = 0; i < ms.length; i++) {
             if (ms[i] == ' ') continue;
