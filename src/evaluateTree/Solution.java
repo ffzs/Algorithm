@@ -5,7 +5,6 @@ package evaluateTree;
  * @Date: 2023/2/6 上午11:43
  */
 
-
 class TreeNode {
     int val;
     TreeNode left;
