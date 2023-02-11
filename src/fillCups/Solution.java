@@ -14,7 +14,6 @@ public class Solution {
             sum += i;
             maxValue = Math.max(maxValue, i);
         }
-        System.out.println(sum);
         if (maxValue >= (sum - maxValue)) return maxValue;
         // 处理奇偶 + 1
         return (sum + 1) / 2;
