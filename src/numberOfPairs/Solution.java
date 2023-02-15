@@ -13,11 +13,13 @@ public class Solution {
         }
 
         int pair = 0, remain = 0;
+
         for (int i : cnt) {
             remain += i % 2;
             pair += i / 2;
         }
-        return new int[] {pair, remain};
+
+        return new int[]{pair, remain};
     }
 
 }
