@@ -22,6 +22,7 @@ public class Solution {
             }
             res += cnt[0];
         }
+
         return res;
     }
 
