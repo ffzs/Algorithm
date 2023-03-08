@@ -19,7 +19,7 @@ public class Solution {
             if (cs[i-k] == 'B') wc -= 1;
             if (wc > res) {
                 res = wc;
-                if (res == k) return 0;
+                if (res == k) break;
             }
         }
         return k - res;
