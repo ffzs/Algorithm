@@ -8,8 +8,7 @@ public class Solution {
 
     public boolean checkPalindromeFormation(String a, String b) {
         char[] ca = a.toCharArray(), cb = b.toCharArray();
-        if (isPalindrome(ca, 0, ca.length-1) || isPalindrome(cb, 0, cb.length - 1)) return true;
-        return check(ca, cb) || check(cb, ca);
+        return isPalindrome(ca, 0, ca.length-1) || isPalindrome(cb, 0, cb.length - 1) || check(ca, cb) || check(cb, ca);
     }
 
     private boolean isPalindrome (char[] a, int l, int r) {
