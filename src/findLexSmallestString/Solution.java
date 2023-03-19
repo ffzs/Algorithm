@@ -49,7 +49,6 @@ public class Solution {
         for (int i = start; i < cs.length; i+=2) {
             cs[i] = (char)((cs[i] - '0' - diff + 10) % 10 + '0');
         }
-//        System.out.println(cs);
     }
 
 
