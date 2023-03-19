@@ -28,6 +28,7 @@ public class Solution {
         int g = gcd(b, n);
 
         for (int i = 0; i < n; i+=g) {
+            // 这里还可以优化，首个为最小情况执行，否则continue
             char[] cs = s.substring(i, i + n).toCharArray();
             findIndex(cs, 1, trans[cs[1]-'0']);
             if ((b & 1) == 1) {
