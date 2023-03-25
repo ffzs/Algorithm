@@ -21,6 +21,7 @@ public class Solution {
             if (arr[i+1] < arr[i]) break;
         }
         return res;
+
     }
 
 }
