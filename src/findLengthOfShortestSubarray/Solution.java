@@ -6,7 +6,6 @@ package findLengthOfShortestSubarray;
  */
 public class Solution {
 
-    int res = 0;
     public int findLengthOfShortestSubarray(int[] arr) {
         int n = arr.length;
         int l = 0, r = n - 1;
@@ -23,5 +22,4 @@ public class Solution {
         }
         return res;
     }
-
 }
