@@ -17,7 +17,6 @@ public class Solution {
                 int[] dir = dirs[idx];
                 x += dir[0];
                 y += dir[1];
-                System.out.println(x + ":" + y);
             }
         }
 
