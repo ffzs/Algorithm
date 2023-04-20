@@ -8,7 +8,7 @@ import java.util.Arrays;
  */
 public class Solution {
     int[][] dp;
-    int n1,  n2;
+    int n1, n2;
     int[] arr1, arr2;
     final static int INF = Integer.MAX_VALUE >> 1;
     public int makeArrayIncreasing(int[] arr1, int[] arr2) {
@@ -16,8 +16,16 @@ public class Solution {
         n2 = arr2.length;
         dp = new int[n1+1][n2+1];
         Arrays.sort(arr2);
+        int[] tmp = new int[n2];
+        int i = 0;
+        tmp[i++] = arr2[0];
+        for (int j = 1; j < n2; j++) {
+            if (arr2[j-1] == arr2[j]) continue;
+            tmp[i++] = arr2[j];
+        }
         this.arr1 = arr1;
-        this.arr2 = arr2;
+        this.arr2 = Arrays.copyOf(tmp, i);
+        n2 = i;
         int res = dfs(0,0,Integer.MIN_VALUE);
         return res == INF?-1:res;
     }
