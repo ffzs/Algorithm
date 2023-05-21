@@ -16,10 +16,10 @@ public class Solution {
             int num = getNum(vat[i] , bucket[i]);
             max = Math.max(num, max);
         }
+        if (max == 0) return 0;
         for (int i = 1; i <= max; i++) {
             int t = 0;
             for (int j = 0; j < n; j++) {
-                if (vat[j] == 0) continue;
                 if (vat[j] - i * bucket[j] > 0) {
                     t += getNum(vat[j], i) - bucket[j];
                 }
