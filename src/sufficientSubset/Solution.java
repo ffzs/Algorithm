@@ -45,8 +45,7 @@ public class Solution {
         if (l < limit) node.left = null;
         if (r < limit) node.right = null;
 
-        int v = Math.max(l, r);
-        return v;
+        return Math.max(l, r);
     }
 
 }
