@@ -13,23 +13,11 @@ public class Solution {
         while (i < n) {
             while (i < n && forts[i] == 0) i++;
             if (i == n) break;
-            if (forts[i] == 1) {
-                int j = i+1;
-                while (j < n && forts[j] == 0) j++;
-                if (j == n) break;
-                if (forts[j] == -1) res = Math.max(j-i, res);
-                i = j-1;
-            }
-
-            if (forts[i] == -1) {
-                int j = i+1;
-                while (j < n && forts[j] == 0) j++;
-                if (j == n) break;
-                if (forts[j] == 1) res = Math.max(j-i, res);
-                i = j-1;
-            }
-
-            i++;
+            int j = i+1;
+            while (j < n && forts[j] == 0) j++;
+            if (j == n) break;
+            if (forts[j] * forts[i] == -1) res = Math.max(j-i-1, res);
+            i = j;
         }
 
         return res;
