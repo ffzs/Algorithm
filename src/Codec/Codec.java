@@ -39,16 +39,20 @@ public class Codec {
     public TreeNode deserialize(String data) {
         if (data.isEmpty()) return null;
         String[] ss = data.split(",");
-        return deDfs(0, ss.length - 1, ss);
+        int[] vals = new int[ss.length];
+        for (int i = 0; i < vals.length; i++) {
+            vals[i] = Integer.parseInt(ss[i]);
+        }
+        return deDfs(0, ss.length - 1, vals);
     }
 
-    TreeNode deDfs (int l, int r, String[] ss) {
+    TreeNode deDfs (int l, int r, int[] vals) {
         if (l > r) return null;
-        int i = l + 1, val = Integer.parseInt(ss[l]);
+        int i = l + 1, val = vals[l];
         TreeNode node = new TreeNode(val);
-        while (i <= r && Integer.parseInt(ss[i]) <= val) ++i;
-        node.left = deDfs(l + 1, i - 1, ss);
-        node.right = deDfs(i, r, ss);
+        while (i <= r && vals[i] <= val) ++i;
+        node.left = deDfs(l + 1, i - 1, vals);
+        node.right = deDfs(i, r, vals);
         return node;
     }
 
