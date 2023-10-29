@@ -13,6 +13,7 @@ public class Solution {
         for (int gift : gifts) {
             pq.offer(gift);
         }
+
         while (k-->0) {
             int v = pq.poll();
             pq.offer((int)Math.sqrt(v));
