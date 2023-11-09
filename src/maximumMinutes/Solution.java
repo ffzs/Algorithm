@@ -76,7 +76,6 @@ public class Solution {
             }
             t+=1;
         }
-        System.out.println(Arrays.deepToString(time));
         return new int[] {time[m-1][n-1], time[m-1][n-2], time[m-2][n-1]};
     }
 
