@@ -7,7 +7,9 @@ import java.util.TreeSet;
  * @Date: 2022/6/20 下午4:40
  */
 public class RangeModule2 {
+
     TreeSet<int[]> ts;
+
     public RangeModule2() {
         ts = new TreeSet<>((a, b) -> a[0] - b[0]);
     }
