@@ -19,22 +19,21 @@ public class Solution {
             f[i][1] = helper(nums[i]);
         }
 
-        Arrays.sort(f, (a, b)-> a[1] - b[1]);
+        Arrays.sort(f, (a, b)-> {
+            if (a[1] == b[1]) return b[0] - a[0];
+            return a[1] - b[1];
+        }
+        );
 
         int j, res = -1;
-        List<Integer> lst = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             j = i + 1;
-            lst.clear();
-            lst.add(f[i][0]);
             while (j < n && f[i][1] == f[j][1]) {
-                lst.add(f[j][0]);
                 j += 1;
             }
 
-            if (lst.size() >= 2) {
-                lst.sort((a, b) -> b-a);
-                res = Math.max(res, lst.get(0) + lst.get(1));
+            if (j - i >= 2) {
+                res = Math.max(res, f[i][0] + f[i + 1][0]);
             }
 
             i = j -1;
