@@ -24,8 +24,6 @@ public class FrontMiddleBackQueue {
         while(pre.size() > back.size()) {
             back.addFirst(pre.pollLast());
         }
-        System.out.println(pre);
-        System.out.println(back);
     }
 
     public void pushMiddle(int val) {
