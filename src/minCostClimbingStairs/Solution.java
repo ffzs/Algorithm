@@ -23,7 +23,7 @@ public class Solution {
         int n = cost.length;
         int a = cost[0], b = cost[1], t;
         for (int i = 2; i < n; i++) {
-            int t = Math.min(a, b) + cost[i];
+            t = Math.min(a, b) + cost[i];
             a = b;
             b = t;
         }
