@@ -2,7 +2,7 @@ package minOperationsMaxProfit;
 
 /**
  * @author: ffzs
- * @Date: 2023/3/5 上午9:19
+ * @Date: 2024/1/1
  */
 public class Solution {
 
@@ -25,7 +25,8 @@ public class Solution {
                 res = cost;
             }
         }
-        if (res * boardingCost > runningCost) minTimes = times;
+
+        if (rest * boardingCost > runningCost) minTimes = times;
         minTimes += rest / 4;
         rest %= 4;
 
