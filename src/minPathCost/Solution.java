@@ -7,7 +7,7 @@ package minPathCost;
 public class Solution {
 
     public int minPathCost(int[][] grid, int[][] moveCost) {
-        
+        return 1;
     }
 
 }

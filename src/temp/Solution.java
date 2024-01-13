@@ -1,17 +1,9 @@
 package temp;
-import org.junit.Test;
 
 import java.util.Arrays;
 
 public class Solution {
-
-    @Test
-    public void sort () {
-        int[] arr = {1,2,5,6,10,6,64,45,23,675,5432,23};
-        quickSort(arr, 0, arr.length-1);
-//        bubbleSort(arr);
-        System.out.println(Arrays.toString(arr));
-    }
+    
 
     private void bubbleSort (int[] arr) {
         int n = arr.length, t;

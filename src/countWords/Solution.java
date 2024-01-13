@@ -10,6 +10,7 @@ import java.util.Map;
 public class Solution {
 
     public int countWords(String[] words1, String[] words2) {
+
         Map<String, Integer> m1 = new HashMap<>();
         Map<String, Integer> m2 = new HashMap<>();
 

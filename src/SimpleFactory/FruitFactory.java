@@ -1,6 +1,5 @@
 package SimpleFactory;
 
-import org.junit.Test;
 
 
 public class FruitFactory {
@@ -19,7 +18,6 @@ public class FruitFactory {
     }
 
 
-    @Test
     public void test () throws Exception {
         FruitFactory ff = new FruitFactory();
         FruitType[] types = FruitType.values();

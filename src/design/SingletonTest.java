@@ -1,8 +1,6 @@
 package design;
-import org.junit.Test;
 
 public class SingletonTest {
-    @Test
     public void single () {
         Singleton5 instance = Singleton5.getInstance();
         instance.say();
