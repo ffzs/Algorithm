@@ -23,6 +23,7 @@ public class Solution {
             }
             pre = pre.next;
         }
+
         return head;
     }
 
