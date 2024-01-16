@@ -37,5 +37,4 @@ public class Solution {
         return root.next;
     }
 
-
 }
