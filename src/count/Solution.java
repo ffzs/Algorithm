@@ -39,6 +39,7 @@ public class Solution {
         if (!isLimit && memo[idx][total] != -1) return memo[idx][total];
 
         int up = isLimit ? cs[idx] - '0' : 9;
+
         int res = 0;
         for (int d = 0; d <= up; d++) {
             res = (res + dfs(idx + 1, total + d, isLimit && (d == up), cs, minSum, maxSum, memo)) % MOD;
